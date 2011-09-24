@@ -1,6 +1,6 @@
 ## Overview
 
-For a long time, I've wanted to add photos taken with my digital camera to Evernote and have the Created date of the note match the date the photo was taken. This application, when a file is dropped onto it, will read the EXIF data of the image, create a new note in Evernote containing the image and if present, set the created date on the note to the date read from the image's EXIF data.
+For a long time, I've wanted to add photos taken with my digital camera to Evernote and have the Created date of the note match the date the photo was taken. This application, when a file or folder is dropped onto it, will read the EXIF data of the image, create a new note in Evernote containing the image and if present, set the created date on the note to the date read from the image's EXIF data.
 
 This simple application consists of an AppleScript droplet and a Python script (which depends on EXIF.py, a third-party Python library used to retrieve EXIF data from digital camera image files.
 
@@ -14,11 +14,11 @@ Grab all of the files in this repo and save them somewhere, then drag EvernoteDa
 
 ### Usage
 
-Drag an image file onto the droplet and it will be added to your Evernote account. If the image's EXIF data contains the "EXIF DateTimeOriginal" value, this value will be used as the Evernote note's created date.
+Drag an image file or folder of image files onto the droplet and it/they will be added to your Evernote account. If the image's EXIF data contains the "EXIF DateTimeOriginal" value, this value will be used as the Evernote note's created date.
 
 ### Misc.
 
-* This droplet doesn't handle multiple files
+* This droplet doesn't handle multiple files, but will accept a folder full of images
 * It only adds notes to the user's default Evernote notebook
 * Tags are not currently supported
 
