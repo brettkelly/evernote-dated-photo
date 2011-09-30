@@ -18,7 +18,6 @@ Drag any number of image files or a folder of image files onto the droplet and t
 
 ### Misc.
 
-* It only adds notes to the user's default Evernote notebook
 * Tags are not currently supported
 
 I'd like to add these things, but I seriously doubt it will happen anytime soon. So, if you want to hack on this, fork away and send me a pull request for any cool stuff you do.
