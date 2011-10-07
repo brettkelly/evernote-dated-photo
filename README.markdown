@@ -12,6 +12,8 @@ This simple application consists of an AppleScript droplet and a Python script (
 
 Grab all of the files in this repo and save them somewhere, then drag EvernoteDatedPhoto.app to your Dock (thereby creating an alias that can receive dropped files)
 
+**Note**: By default, this application will add any dragged images to your _default_ notebook in Evernote. If you'd like to be prompted to choose the notebook where your images will be added, you'll need to modify the useDefaultNotebook property at the top of the AppleScript document to be true instead of false.
+
 ### Usage
 
 Drag any number of image files or a folder of image files onto the droplet and they will be added to your Evernote account. If the image's EXIF data contains the "EXIF DateTimeOriginal" value, this value will be used as the Evernote note's created date.
