@@ -14,12 +14,10 @@ Grab all of the files in this repo and save them somewhere, then drag EvernoteDa
 
 ### Usage
 
-Drag an image file or folder of image files onto the droplet and it/they will be added to your Evernote account. If the image's EXIF data contains the "EXIF DateTimeOriginal" value, this value will be used as the Evernote note's created date.
+Drag any number of image files or a folder of image files onto the droplet and they will be added to your Evernote account. If the image's EXIF data contains the "EXIF DateTimeOriginal" value, this value will be used as the Evernote note's created date.
 
 ### Misc.
 
-* This droplet doesn't handle multiple files, but will accept a folder full of images
-* It only adds notes to the user's default Evernote notebook
 * Tags are not currently supported
 
 I'd like to add these things, but I seriously doubt it will happen anytime soon. So, if you want to hack on this, fork away and send me a pull request for any cool stuff you do.
