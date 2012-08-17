@@ -1,17 +1,18 @@
-import EXIF
 import sys
 import os.path
 
-def formatDate(date):
-    "YYYY:MM:DD HH:MM:SS"
-    d = date.split(' ')[0]
-    y,m,d = d.split(':')
-    return '%s/%s/%s' % (m,d,y[2:])
+def getDateStringFromFileName(fname):
+    fname = os.path.split(fname)[1]
+    fname = fname.replace("liked_","")
+    try:
+        p = fname.split('_') # remove trailing ID
+        if p[0]:
+            y,m,d = p[0].split('-')
+            return '%s/%s/%s' % (m,d,y[2:]) # format and return date
+    except Exception, e:
+        # something went wrong; abort mission
+        return str(e)
 
 if sys.argv[1] and os.path.exists(sys.argv[1]):
-    fd = open(sys.argv[1].strip(),'rb')
-    tags = EXIF.process_file(fd)
-    fd.close()
-    if tags.has_key('EXIF DateTimeOriginal'):
-        d = str(tags['EXIF DateTimeOriginal'])
-        sys.stdout.write(formatDate(d))
+    datestr = getDateStringFromFileName(sys.argv[1])
+    sys.stdout.write(datestr)
